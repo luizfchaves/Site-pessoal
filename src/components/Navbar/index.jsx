@@ -7,21 +7,20 @@ const Navbar = () => {
     localStorage.getItem("colorMode") || "light"
   );
   function setColorMode() {
-    setColorModeName(localStorage.getItem("colorMode"));
-    Object.entries(color[localStorage.getItem("colorMode")]).map(r => {
+    Object.entries(color[colorModeName]).map(r => {
       document.documentElement.style.setProperty(r[0], r[1]);
     });
   }
-  function changeColorMode() {
-    localStorage.setItem(
-      "colorMode",
-      localStorage.getItem("colorMode") === "dark" ? "light" : "dark"
-    );
-    setColorMode();
+  async function changeColorMode() {
+    let newColorMode =
+      localStorage.getItem("colorMode") === "dark" ? "light" : "dark";
+    await localStorage.setItem("colorMode", newColorMode);
+    await setColorModeName(newColorMode);
   }
+
   useEffect(() => {
     setColorMode();
-  }, []);
+  }, [colorModeName]);
 
   return (
     <nav id="navbar">
