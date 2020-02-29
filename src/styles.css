@@ -11,17 +11,23 @@ body {
 p {
   color: var(--text-color);
 }
-.container {
+.content {
   padding: 20px;
 }
 
 @media (min-width: 720px) {
-  .container {
+  .content {
     margin-left: 5rem;
+  }
+  .content:last-child {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 720px) {
-  .container {
+  .content {
     margin: 0px;
+  }
+  .content:last-child {
+    margin-bottom: 8rem;
   }
 }

@@ -1,5 +1,5 @@
 #navbar {
-  position: fixed;
+  position: absolute;
   background-color: var(--primary-color);
   transition: width 250ms ease;
 }
@@ -29,6 +29,8 @@
 }
 @media (min-width: 720px) {
   #navbar {
+    top: 0;
+    left: 0;
     width: 5rem;
     height: 100vh;
   }
