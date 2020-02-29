@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
-import { color } from "./../../colors";
+import { color } from "./../../colors.js";
 const Navbar = () => {
   const svgSize = 36;
   const [colorModeName, setColorModeName] = useState(
-    localStorage.getItem("colorMode")
+    localStorage.getItem("colorMode") || "light"
   );
   function setColorMode() {
     setColorModeName(localStorage.getItem("colorMode"));
