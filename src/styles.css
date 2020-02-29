@@ -1,0 +1,27 @@
+* {
+  font-family: "Montserrat";
+}
+body {
+  transition: background-color 400ms ease;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  background-color: var(--background-color);
+}
+p {
+  color: var(--text-color);
+}
+.container {
+  padding: 20px;
+}
+
+@media (min-width: 720px) {
+  .container {
+    margin-left: 5rem;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    margin: 0px;
+  }
+}
