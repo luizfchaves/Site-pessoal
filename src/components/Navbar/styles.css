@@ -2,6 +2,7 @@
   position: fixed;
   background-color: var(--primary-color);
   transition: width 250ms ease;
+  border-right: 1px solid var(--primary-color);
 }
 
 #navbar-list {

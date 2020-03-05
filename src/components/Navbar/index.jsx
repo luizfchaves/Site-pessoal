@@ -1,38 +1,16 @@
-import React, { useEffect, useState } from "react";
-
-import { color } from "./../../colors.js";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import "./styles.css";
 
 const Navbar = () => {
   const svgSize = 36;
-  const [colorModeName, setColorModeName] = useState(
-    localStorage.getItem("colorMode") || detectPrefersColor()
-  );
+  const themeColor = useSelector(state => state.themeColor);
+  const dispatch = useDispatch();
 
-  function detectPrefersColor() {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches)
-      return "dark";
-    return "light";
+  function changeColorMode() {
+    dispatch({ type: "CHANGE_THEME" });
   }
-  function setColorMode() {
-    Object.entries(color[colorModeName]).map(r => {
-      document.documentElement.style.setProperty(r[0], r[1]);
-    });
-  }
-  async function changeColorMode() {
-    let activeColor = localStorage.getItem("colorMode")
-      ? localStorage.getItem("colorMode")
-      : detectPrefersColor();
-
-    let newColorMode = activeColor === "dark" ? "light" : "dark";
-    await localStorage.setItem("colorMode", newColorMode);
-    await setColorModeName(newColorMode);
-  }
-
-  useEffect(() => {
-    setColorMode();
-  }, [colorModeName]);
 
   const navItems = [
     {
@@ -61,7 +39,8 @@ const Navbar = () => {
       title: "Textos",
       path:
         "M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm-2.426 14.741h-3.574v-.202l1.261-1.529c.134-.139.195-.335.162-.526v-5.304c.015-.147-.041-.293-.151-.392l-1.121-1.35v-.201h3.479l2.689 5.897 2.364-5.897h3.317v.201l-.958.919c-.083.063-.124.166-.106.269v6.748c-.018.103.023.206.106.269l.936.919v.201h-4.706v-.201l.969-.941c.095-.095.095-.123.095-.269v-5.455l-2.695 6.844h-.364l-3.137-6.844v4.587c-.026.193.038.387.174.526l1.26 1.529v.202z",
-      link: "/#texts"
+      link: "/#texts",
+      disabled: true
     },
     {
       id: "curriculum",
@@ -74,23 +53,26 @@ const Navbar = () => {
   return (
     <nav id="navbar">
       <ul id="navbar-list">
-        {navItems.map(item => (
-          <li key={item.id} className="navbar-item">
-            <a href={item.link}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={svgSize}
-                height={svgSize}
-                viewBox="0 0 24 24"
-              >
-                <path d={item.path} />
-              </svg>
-              <p>{item.title}</p>
-            </a>
-          </li>
-        ))}
+        {navItems.map(item => {
+          if (!item.disabled)
+            return (
+              <li key={item.id} className="navbar-item">
+                <a href={item.link}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={svgSize}
+                    height={svgSize}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d={item.path} />
+                  </svg>
+                  <p>{item.title}</p>
+                </a>
+              </li>
+            );
+        })}
 
-        <li className="navbar-item" onClick={() => changeColorMode()}>
+        <li className="navbar-item" onClick={changeColorMode}>
           <a style={{ cursor: "pointer" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,13 +80,13 @@ const Navbar = () => {
               height={svgSize}
               viewBox="0 0 24 24"
             >
-              {colorModeName === "light" ? (
+              {themeColor === "light" ? (
                 <path d="M12 10.999c1.437.438 2.562 1.564 2.999 3.001.44-1.437 1.565-2.562 3.001-3-1.436-.439-2.561-1.563-3.001-3-.437 1.436-1.562 2.561-2.999 2.999zm8.001.001c.958.293 1.707 1.042 2 2.001.291-.959 1.042-1.709 1.999-2.001-.957-.292-1.707-1.042-2-2-.293.958-1.042 1.708-1.999 2zm-1-9c-.437 1.437-1.563 2.562-2.998 3.001 1.438.44 2.561 1.564 3.001 3.002.437-1.438 1.563-2.563 2.996-3.002-1.433-.437-2.559-1.564-2.999-3.001zm-7.001 22c-6.617 0-12-5.383-12-12s5.383-12 12-12c1.894 0 3.63.497 5.37 1.179-2.948.504-9.37 3.266-9.37 10.821 0 7.454 5.917 10.208 9.37 10.821-1.5.846-3.476 1.179-5.37 1.179z" />
               ) : (
                 <path d="M22.088 13.126l1.912-1.126-1.912-1.126c-1.021-.602-1.372-1.91-.788-2.942l1.093-1.932-2.22-.02c-1.185-.01-2.143-.968-2.153-2.153l-.02-2.219-1.932 1.093c-1.031.583-2.34.233-2.941-.788l-1.127-1.913-1.127 1.913c-.602 1.021-1.91 1.372-2.941.788l-1.932-1.093-.02 2.219c-.01 1.185-.968 2.143-2.153 2.153l-2.22.02 1.093 1.932c.584 1.032.233 2.34-.788 2.942l-1.912 1.126 1.912 1.126c1.021.602 1.372 1.91.788 2.942l-1.093 1.932 2.22.02c1.185.01 2.143.968 2.153 2.153l.02 2.219 1.932-1.093c1.031-.583 2.34-.233 2.941.788l1.127 1.913 1.127-1.913c.602-1.021 1.91-1.372 2.941-.788l1.932 1.093.02-2.219c.011-1.185.969-2.143 2.153-2.153l2.22-.02-1.093-1.932c-.584-1.031-.234-2.34.788-2.942zm-10.117 6.874c-4.411 0-8-3.589-8-8s3.588-8 8-8 8 3.589 8 8-3.589 8-8 8zm6.029-8c0 3.313-2.687 6-6 6s-6-2.687-6-6 2.687-6 6-6 6 2.687 6 6z" />
               )}
             </svg>
-            <p> {colorModeName === "light" ? "Modo escuro" : "Modo claro"}</p>
+            <p> {themeColor === "light" ? "Modo escuro" : "Modo claro"}</p>
           </a>
         </li>
       </ul>
