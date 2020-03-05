@@ -10,6 +10,9 @@ function detectPrefersColor() {
 }
 function setColorMode(theme) {
   localStorage.setItem("themeColor", theme);
+  document
+    .querySelector("meta[name=theme-color]")
+    .setAttribute("content", color[theme]["--background-color"]);
   Object.entries(color[theme]).map(r => {
     document.documentElement.style.setProperty(r[0], r[1]);
   });
