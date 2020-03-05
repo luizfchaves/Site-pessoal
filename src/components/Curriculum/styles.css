@@ -1,0 +1,16 @@
+#curriculum {
+  display: flex;
+  flex-direction: column;
+}
+.curriculum-closed {
+  height: 0px;
+}
+.curriculum-opened {
+  height: 50vh;
+}
+#curriculum-iframe {
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 2px;
+  transition: height 250ms ease;
+  width: 100%;
+}

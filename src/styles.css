@@ -94,6 +94,15 @@ hr {
   display: flex;
   flex-direction: row;
 }
+.to-right {
+  justify-content: flex-end;
+}
+.to-center {
+  justify-content: center;
+}
+.to-left{
+  justify-content: flex-start;
+}
 
 @media (min-width: 720px) {
   .content {

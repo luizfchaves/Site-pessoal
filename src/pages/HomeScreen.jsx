@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import AboutMe from "./../components/AboutMe";
+import Curriculum from "./../components/Curriculum";
 
 function HomeScreen() {
   useEffect(() => {
@@ -19,9 +20,7 @@ function HomeScreen() {
           texts
         </div>
         <hr />
-        <div id="curriculum" style={{ height: "120vh" }}>
-          curriculum
-        </div>
+        <Curriculum />
       </div>
     </>
   );
