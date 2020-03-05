@@ -11,8 +11,8 @@ import store from "./store";
 function App() {
   return (
     <Provider store={store}>
+      <Navbar />
       <Router>
-        <Navbar />
         <Switch>
           <Route path="/styles">
             <StylePage />

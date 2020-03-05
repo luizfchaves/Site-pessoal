@@ -3,7 +3,7 @@
   color: var(--text-color);
 }
 body {
-  transition: background-color 400ms ease;
+  transition: background-color 100ms ease;
   margin: 0;
   padding: 0;
   top: 0;
@@ -100,7 +100,7 @@ hr {
 .to-center {
   justify-content: center;
 }
-.to-left{
+.to-left {
   justify-content: flex-start;
 }
 

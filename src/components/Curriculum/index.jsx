@@ -22,7 +22,7 @@ const Curriculum = () => {
   }
 
   function handleDownloadCurriculum() {
-    window.open("curriculo.pdf", "_blank");
+    window.open("curriculo-05-03-2020.pdf", "_blank");
   }
   return (
     <div id="curriculum">
@@ -31,7 +31,7 @@ const Curriculum = () => {
       <iframe
         id="curriculum-iframe"
         title="curriculum"
-        src="curriculo.pdf"
+        src="curriculo-05-03-2020.pdf"
         className={`curriculum-${stateCurriculum}`}
       />
       <div className="row to-right">

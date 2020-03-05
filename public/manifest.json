@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Luiz Chaves",
+  "name": "Luiz Chaves",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,7 +19,7 @@
     }
   ],
   "start_url": "https://luizchaves.dev",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "portrait",
+  "theme_color": "#3C91E6",
+  "background_color": "#000000"
 }
