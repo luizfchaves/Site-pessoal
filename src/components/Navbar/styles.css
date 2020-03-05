@@ -1,5 +1,5 @@
 #navbar {
-  position: absolute;
+  position: fixed;
   background-color: var(--primary-color);
   transition: width 250ms ease;
 }
@@ -12,6 +12,14 @@
   margin: 0;
   padding: 0;
 }
+.navbar-item a:hover {
+  background: var(--background-color);
+}
+.navbar-item a:hover p,
+.navbar-item a:hover svg {
+  fill: var(--primary-color);
+  color: var(--primary-color);
+}
 .navbar-item a {
   display: flex;
   justify-content: center;
@@ -19,12 +27,15 @@
   text-decoration: none;
 }
 .navbar-item a p {
-  display: none;
+  transition: 0.5s;
+  /*display: none;*/
   color: var(--background-color);
-  font-size: 1.2rem;
+  /*font-size: 1.2rem;*/
+  font-size: 0px;
   font-weight: 600;
 }
 .navbar-item svg {
+  margin: 1rem;
   fill: var(--background-color);
 }
 @media (min-width: 720px) {
@@ -41,14 +52,19 @@
   #navbar:hover {
     width: 16rem;
   }
+  #navbar:hover #navbar-list a {
+    padding-left: 1rem;
+    justify-content: flex-start;
+  }
   #navbar:hover #navbar-list p {
     display: block;
+    font-size: 1.2rem;
   }
   .navbar-item {
     margin: 1rem 0px;
   }
   .navbar-item svg {
-    margin: 3rem 0.5rem;
+    margin: 1rem 0.5rem;
     font-size: 3rem;
   }
   .navbar-item:last-child {
@@ -57,15 +73,35 @@
   .navbar-item:last-child svg {
     margin: 0.5rem;
   }
+  .navbar-item:first-child {
+    display: inline;
+    margin: 0px 0px auto 0px;
+    height: 4rem;
+  }
+
+  .navbar-item:first-child a svg {
+    margin: 1rem 0.5rem;
+  }
+  .navbar-item:first-child a p {
+    margin: 1rem 0;
+  }
 }
 @media (max-width: 720px) {
   #navbar {
     bottom: 0;
-    height: 4rem;
+    height: 5rem;
     width: 100vw;
+    align-content: center;
   }
   #navbar-list {
-    align-items: center;
+    max-width: 99vw;
     justify-content: space-around;
+    align-content: center;
+  }
+  .navbar-item a {
+    height: 100%;
+  }
+  .navbar-item:first-child {
+    display: none;
   }
 }

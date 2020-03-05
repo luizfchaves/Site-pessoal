@@ -1,12 +1,18 @@
+const primaryColor = "#3C91E6";
+const darkColor = "#222222";
+const lightColor = "#EAEAEA";
+
+//FF0033
+//FF331F
 exports.color = {
   dark: {
-    "--background-color": "#222222",
-    "--text-color": "#ffffff",
-    "--primary-color": "#64B6AC"
+    "--background-color": darkColor,
+    "--text-color": lightColor,
+    "--primary-color": primaryColor
   },
   light: {
-    "--background-color": "#EAEAEA",
-    "--text-color": "#474747",
-    "--primary-color": "#64B6AC"
+    "--background-color": lightColor,
+    "--text-color": darkColor,
+    "--primary-color": primaryColor
   }
 };

@@ -1,5 +1,6 @@
 * {
   font-family: "Montserrat";
+  color: var(--text-color);
 }
 body {
   transition: background-color 400ms ease;
@@ -10,9 +11,88 @@ body {
 }
 p {
   color: var(--text-color);
+  margin: 0.2rem;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.title {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.sub-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.distance-above {
+  margin-top: 1.5rem;
+  margin-bottom: 0.1rem;
+}
+hr {
+  margin: 1rem 0px;
+  border: 0;
+  border-top: 1px solid var(--text-color);
+}
+.hr-small {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 .content {
-  padding: 20px;
+  padding: 1rem;
+}
+.btn {
+  transition: 0.5s ease;
+  margin: 0.2rem;
+  padding: 0.5rem;
+  background: none;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-small {
+  padding: 0.4rem;
+  font-size: 0.8rem;
+}
+.btn-large {
+  padding: 0.6rem;
+  font-size: 1.2rem;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+.btn-primary:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+.btn-secondary {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.btn-secondary:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+.section {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (min-width: 720px) {
@@ -22,6 +102,12 @@ p {
   .content:last-child {
     margin-bottom: 0;
   }
+  .row .col-2 {
+    width: 50%;
+  }
+  .row .col-3 {
+    width: 33%;
+  }
 }
 @media (max-width: 720px) {
   .content {
@@ -29,5 +115,11 @@ p {
   }
   .content:last-child {
     margin-bottom: 8rem;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row div {
+    width: 100%;
   }
 }
