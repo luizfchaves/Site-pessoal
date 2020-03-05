@@ -27,7 +27,7 @@
   text-decoration: none;
 }
 .navbar-item a p {
-  transition: 0.5s;
+  transition: 250ms ease-out;
   /*display: none;*/
   color: var(--background-color);
   /*font-size: 1.2rem;*/
