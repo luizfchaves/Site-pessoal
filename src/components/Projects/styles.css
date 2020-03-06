@@ -1,0 +1,30 @@
+#projects-list {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.projects-list-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 1rem;
+}
+.projects-list-item p {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.projects-list-item-logo {
+  display: flex;
+  width: 12rem;
+  height: 12rem;
+}
+.projects-list-item-logo img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 0.5rem;
+}

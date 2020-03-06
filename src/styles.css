@@ -104,7 +104,7 @@ hr {
   justify-content: flex-start;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 721px) {
   .content {
     margin-left: 5rem;
   }
@@ -131,4 +131,20 @@ hr {
   .row div {
     width: 100%;
   }
+}
+
+::-webkit-scrollbar {
+  height: 0.4rem;
+  width: 0.2rem;
+}
+::-webkit-scrollbar-track {
+  background: #cecece;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+  opacity: 1;
 }

@@ -14,3 +14,19 @@
   transition: height 250ms ease;
   width: 100%;
 }
+
+#curriculum-iframe #sizer {
+  height: 0.4rem;
+  width: 0.2rem;
+}
+#curriculum-iframe::-webkit-scrollbar-track {
+  background: #cecece;
+}
+#curriculum-iframe::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: var(--primary-color);
+}
+#curriculum-iframe::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+  opacity: 1;
+}

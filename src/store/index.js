@@ -9,6 +9,19 @@ function detectPrefersColor() {
   return "light";
 }
 function setColorMode(theme) {
+  // let funnyColors = localStorage.getItem("funnyColors");
+  // if (funnyColors) {
+  //   try {
+  //     funnyColors = JSON.parse(funnyColors);
+  //     Object.entries(funnyColors).map(r => {
+  //       document.documentElement.style.setProperty(r[0], r[1]);
+  //     });
+  //   } catch (r) {
+  //     localStorage.removeItem("funnyColors");
+  //     setColorMode(setColorMode(detectPrefersColor));
+  //   }
+  //   return;
+  // }
   localStorage.setItem("themeColor", theme);
   document
     .querySelector("meta[name=theme-color]")

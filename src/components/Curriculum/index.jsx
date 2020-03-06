@@ -34,9 +34,9 @@ const Curriculum = () => {
         src="curriculo-05-03-2020.pdf"
         className={`curriculum-${stateCurriculum}`}
       />
-      <div className="row to-right">
+      <div className="row to-right distance-above">
         <button className="btn btn-primary" onClick={handleDivCurriculum}>
-          Abrir
+          {stateCurriculum === "opened" ? "Fechar" : "Abrir"}
         </button>
         <button
           className="btn btn-secondary"

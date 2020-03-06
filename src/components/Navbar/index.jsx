@@ -9,6 +9,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   function changeColorMode() {
+    localStorage.removeItem("funnyColors");
     dispatch({ type: "CHANGE_THEME" });
   }
 
