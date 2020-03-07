@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./styles.css";
 
 const AboutMe = () => {
+  const [skillsHidden, setSkillsHidden] = useState(false);
   return (
     <>
       <div id="about-me" className="section">
@@ -11,16 +12,38 @@ const AboutMe = () => {
         </p>
         <span>Desenvolvedor fullstack</span>
         <span> React | Node.js</span>
-        <p id="skills" className="text distance-above">
-          <span className="sub-title">Habilidades</span>
-          <span>React - Avançado </span>
-          <span>Node.js - Intermediário</span>
-          <span>HTML - Avançado</span>
-          <span>CSS - Avançado</span>
-          <span>Git/GitHub - Intermediário</span>
-          <span>GitFlow</span>
-          <span></span>
-        </p>
+        <div id="skills">
+          <div id="skills-header">
+            <p className="sub-title  distance-above">Habilidades</p>
+            <button
+              className="btn btn-secondary"
+              onClick={() => setSkillsHidden(!skillsHidden)}
+            >
+              {skillsHidden ? "+" : "-"}
+            </button>
+          </div>
+          <div id="skills-body" className={skillsHidden ? "not-show" : null}>
+            <p id="firstskills" className="text">
+              <span className="sub-title">Principais</span>
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Git/GitHub</span>
+              <span>GitFlow</span>
+              <span>SCRUM</span>
+            </p>
+            <p id="othersSkills" className="text">
+              <span className="sub-title">Outras</span>
+              <span>React Native</span>
+              <span>jQuery</span>
+              <span>MySQL</span>
+              <span>Bootstrap</span>
+              <span>Heroku</span>
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

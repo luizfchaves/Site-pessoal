@@ -1,7 +1,44 @@
+#about-me {
+  margin-bottom: 2rem;
+}
 #about-me span {
   display: block;
   margin: 0.2rem 0rem 0.2rem 1rem;
 }
-#skills span:first-child {
-  margin: 0.2rem 0px 0.5rem;
+#skills {
+  display: flex;
+  flex-direction: column;
+}
+#skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#skills-body {
+  height: 22rem;
+  transition: 0.5s ease;
+  border: 1px solid var(--background-color);
+  overflow: hidden;
+}
+
+#skills-header p {
+  margin: 0;
+}
+#firstskills span,
+#othersSkills span {
+  margin: 0.2rem 0rem 0.2rem 2rem;
+}
+#firstskills .sub-title,
+#othersSkills .sub-title {
+  font-weight: 500;
+}
+
+#firstskills span:first-child,
+#othersSkills span:first-child {
+  margin: 0.2rem 0rem 0.2rem 1rem;
+}
+
+.not-show {
+  border-bottom: 1px solid var(--text-color) !important;
+  height: 1px !important;
 }

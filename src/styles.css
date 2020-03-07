@@ -140,7 +140,7 @@ hr {
   width: 0.2rem;
 }
 ::-webkit-scrollbar-track {
-  background: var(--backgrounds-color);
+  background: var(--background-color);
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
