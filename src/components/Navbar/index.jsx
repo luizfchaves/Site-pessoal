@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import "./styles.css";
@@ -51,6 +51,7 @@ const Navbar = () => {
       link: "/#curriculum"
     }
   ];
+
   return (
     <nav id="navbar">
       <ul id="navbar-list">

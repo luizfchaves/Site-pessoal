@@ -52,6 +52,8 @@ hr {
   padding: 1rem;
 }
 .btn {
+  text-align: center;
+  text-decoration: none;
   transition: 0.5s ease;
   margin: 0.2rem;
   padding: 0.5rem;
@@ -104,7 +106,7 @@ hr {
   justify-content: flex-start;
 }
 
-@media (min-width: 721px) {
+@media (min-width: 48.1rem) and (min-height: 30rem) {
   .content {
     margin-left: 5rem;
   }
@@ -118,7 +120,7 @@ hr {
     width: 33%;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 48rem), (max-height: 30rem) {
   .content {
     margin: 0px;
   }
@@ -138,13 +140,12 @@ hr {
   width: 0.2rem;
 }
 ::-webkit-scrollbar-track {
-  background: #cecece;
+  background: var(--backgrounds-color);
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
   background: var(--primary-color);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
-  opacity: 1;
+  background: var(--text-color);
 }

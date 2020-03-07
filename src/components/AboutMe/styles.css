@@ -1,0 +1,7 @@
+#about-me span {
+  display: block;
+  margin: 0.2rem 0rem 0.2rem 1rem;
+}
+#skills span:first-child {
+  margin: 0.2rem 0px 0.5rem;
+}

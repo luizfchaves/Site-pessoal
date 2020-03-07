@@ -10,17 +10,27 @@
   flex-direction: column;
   border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
-  padding: 2rem;
-  margin: 1rem;
+  padding: 2rem 1rem;
+  margin: 1rem 0.5rem;
 }
-.projects-list-item p {
+.projects-list-item:hover .projects-list-item-logo {
+  transition: 100ms ease;
+  width: 13rem;
+  margin: 0px;
+}
+.projects-list-item-title {
+  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
+    1px 0 var(--background-color), 0 -1px var(--background-color);
   text-align: center;
   margin: 0.5rem 0;
 }
 .projects-list-item-logo {
   display: flex;
+  justify-items: center;
+  align-content: center;
   width: 12rem;
   height: 12rem;
+  margin: 0px 0.5rem;
 }
 .projects-list-item-logo img {
   width: 100%;

@@ -18,13 +18,19 @@ const Projects = () => {
             <div className="projects-list-item-logo">
               <img src={project.url} alt={`${project.title} logo`} />
             </div>
-            <p className="sub-title">{project.title}</p>
-            <button className="btn btn-secondary">Saiba mais</button>
+            <p className="projects-list-item-title sub-title">
+              {project.title}
+            </p>
+            <a href={`/projects/${project.id}`} className="btn btn-secondary">
+              Saiba mais
+            </a>
           </div>
         ))}
       </div>
       <div className="row to-right">
-        <button className="btn btn-primary">Exibir mais</button>
+        <a href="/projects" className="btn btn-primary">
+          Exibir todos
+        </a>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import AboutMe from "./../components/AboutMe";
 import Curriculum from "./../components/Curriculum";
-import Projects from "./../components/Projects";
+import ProjectsList from "./../components/ProjectsList";
 
 function HomeScreen() {
   useEffect(() => {
@@ -13,7 +13,7 @@ function HomeScreen() {
       <div className="content">
         <AboutMe />
         <hr />
-        <Projects />
+        <ProjectsList />
         <hr />
         <Curriculum />
       </div>
