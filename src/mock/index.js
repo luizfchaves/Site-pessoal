@@ -1,5 +1,11 @@
 exports.projects = [
   {
+    id: 5,
+    title: "Spotify by Luiz Chaves",
+    url: "https://site.luizchaves.dev/images/spotify.jpg",
+    description: ""
+  },
+  {
     id: 1,
     title: "SPOT",
     url: "https://www.luizchaves.dev/image/spot_logo.jpg",
