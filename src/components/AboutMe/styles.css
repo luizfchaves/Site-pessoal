@@ -39,6 +39,5 @@
 }
 
 .not-show {
-  border-bottom: 1px solid var(--text-color) !important;
   height: 1px !important;
 }

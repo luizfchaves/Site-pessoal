@@ -16,32 +16,39 @@ const AboutMe = () => {
           <div id="skills-header">
             <p className="sub-title  distance-above">Habilidades</p>
             <button
-              className="btn btn-secondary"
+              className="btn btn-primary"
               onClick={() => setSkillsHidden(!skillsHidden)}
             >
               {skillsHidden ? "+" : "-"}
             </button>
           </div>
-          <div id="skills-body" className={skillsHidden ? "not-show" : null}>
-            <p id="firstskills" className="text">
-              <span className="sub-title">Principais</span>
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Git/GitHub</span>
-              <span>GitFlow</span>
-              <span>SCRUM</span>
-            </p>
-            <p id="othersSkills" className="text">
-              <span className="sub-title">Outras</span>
-              <span>React Native</span>
-              <span>jQuery</span>
-              <span>MySQL</span>
-              <span>Bootstrap</span>
-              <span>Heroku</span>
-            </p>
+          <div
+            id="skills-body"
+            className={skillsHidden ? "not-show row" : "row"}
+          >
+            <div className="col-2">
+              <p id="firstskills" className="text">
+                <span className="sub-title">Principais</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>MongoDB</span>
+                <span>Git/GitHub</span>
+                <span>GitFlow</span>
+                <span>SCRUM</span>
+              </p>
+            </div>
+            <div className="col-2">
+              <p id="othersSkills" className="text">
+                <span className="sub-title">Outras</span>
+                <span>React Native</span>
+                <span>jQuery</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+                <span>Heroku</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
