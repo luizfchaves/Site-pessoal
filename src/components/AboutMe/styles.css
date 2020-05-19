@@ -35,6 +35,8 @@
   align-items: center;
 }
 #skills-body {
+  display: flex;
+  justify-content: space-around;
   transition: 0.5s ease;
   border: 1px solid var(--background-color);
   overflow: hidden;
@@ -56,4 +58,11 @@
 .not-show {
   height: 1px !important;
   overflow: hidden;
+}
+
+@media (max-width: 48rem), (max-height: 30rem) {
+  #skills-body {
+    justify-content: space-around;
+    flex-direction: column;
+  }
 }

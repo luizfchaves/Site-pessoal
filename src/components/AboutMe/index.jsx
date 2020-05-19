@@ -75,24 +75,24 @@ const AboutMe = () => {
           <div id="skills-header">
             <p className="title  distance-above">Habilidades</p>
           </div>
-          <div id="skills-body" className="row">
-            <div className="col-2">
+          <div id="skills-body">
+            <div>
               <p id="firstskills" className="text">
                 <span className="sub-title">Principais</span>
                 <span>React</span>
                 <span>Node.js</span>
                 <span>HTML</span>
                 <span>CSS</span>
-                <span>MongoDB</span>
                 <span>Git/GitHub</span>
                 <span>GitFlow</span>
                 <span>SCRUM</span>
               </p>
             </div>
-            <div className="col-2">
+            <div>
               <p id="othersSkills" className="text">
-                <span className="sub-title">Outras</span>
+                <span className="sub-title">Complementares</span>
                 <span>React Native</span>
+                <span>MongoDB</span>
                 <span>jQuery</span>
                 <span>MySQL</span>
                 <span>Bootstrap</span>
