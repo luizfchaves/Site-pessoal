@@ -47,7 +47,7 @@ const Projects = () => {
             <div className="projects-list-item">
               <div className="projects-list-item-logo">
                 <img
-                  src={`${process.env.PUBLIC_URL}${project.imageUrl}`}
+                  src={`${project.imageUrl}`}
                   alt={`${project.title} logo`}
                 />
               </div>
