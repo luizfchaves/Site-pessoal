@@ -22,7 +22,10 @@ const AboutMe = () => {
           <p className="title">Contatos</p>
           <ul className="contacts-list">
             <li>
-              <a href="https://www.linkedin.com/in/luiz-chaves/">
+              <a
+                href="https://www.linkedin.com/in/luiz-chaves/"
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -34,7 +37,10 @@ const AboutMe = () => {
               </a>
             </li>
             <li>
-              <a href="https://api.whatsapp.com/send?phone=5521988705275&text=Ol%C3%A1%20Luiz!">
+              <a
+                href="https://api.whatsapp.com/send?phone=5521988705275&text=Ol%C3%A1%20Luiz!"
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -46,7 +52,7 @@ const AboutMe = () => {
               </a>
             </li>
             <li>
-              <a href="https://github.com/LuizFChaves">
+              <a href="https://github.com/LuizFChaves" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -58,7 +64,7 @@ const AboutMe = () => {
               </a>
             </li>
             <li>
-              <a href="mailto:luizfaschaves@gmail.com">
+              <a href="mailto:luizfaschaves@gmail.com" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
