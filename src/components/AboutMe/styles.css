@@ -5,17 +5,36 @@
   display: block;
   margin: 0.2rem 0rem 0.2rem 1rem;
 }
+#contacts {
+  margin-top: 1rem;
+}
+.contacts-list {
+  display: flex;
+  list-style: none;
+  width: 75%;
+  margin: 1rem auto;
+  padding: 0px;
+  justify-content: space-around;
+}
+
+.contacts-list li a svg {
+  fill: var(--text-color);
+}
+
+.contacts-list li a:hover > svg {
+  fill: var(--primary-color) !important;
+}
+
 #skills {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
 }
 #skills-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 #skills-body {
-  height: 22rem;
   transition: 0.5s ease;
   border: 1px solid var(--background-color);
   overflow: hidden;
@@ -28,10 +47,6 @@
 #othersSkills span {
   margin: 0.2rem 0rem 0.2rem 2rem;
 }
-#firstskills .sub-title,
-#othersSkills .sub-title {
-  font-weight: 500;
-}
 
 #firstskills span:first-child,
 #othersSkills span:first-child {
@@ -40,4 +55,5 @@
 
 .not-show {
   height: 1px !important;
+  overflow: hidden;
 }

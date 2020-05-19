@@ -106,6 +106,40 @@ hr {
   justify-content: flex-start;
 }
 
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 50vh;
+  width: 50vw;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+.modal .modal-content .modal-close-btn {
+  margin-top: auto;
+}
+.modal-closed {
+  display: none !important;
+}
+.modal .modal-content .modal-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
 @media (min-width: 48.1rem) and (min-height: 30rem) {
   .content {
     margin-left: 5rem;
@@ -121,6 +155,10 @@ hr {
   }
 }
 @media (max-width: 48rem), (max-height: 30rem) {
+  .modal .modal-content {
+    height: 75vh;
+    width: 75vw;
+  }
   .content {
     margin: 0px;
   }

@@ -1,32 +1,40 @@
 exports.projects = [
   {
-    id: 5,
-    title: "Spotify by Luiz Chaves",
-    url: "https://site.luizchaves.dev/images/spotify.png",
-    description: ""
-  },
-  {
     id: 1,
-    title: "SPOT",
-    url: "https://www.luizchaves.dev/image/spot_logo.jpg",
-    description: ""
+    title: "Spotify dashboard",
+    imageUrl: `https://site.luizchaves.dev/images/spotify_logo.png`,
+    url: "https://spotify.luizchaves.dev/",
+    description:
+      "Um dashboard do spotify para pesquisa de musicas, albums e artistas",
   },
   {
     id: 2,
-    title: "AiGree",
-    url: "https://www.luizchaves.dev/image/aigree_logo.png",
-    description: ""
+    title: "SPOT",
+    imageUrl: "https://site.luizchaves.dev/image/spot_logo.jpg",
+    url: "https://www.instagram.com/aplicativo_spot/",
+    description:
+      "Aplicativo que conecta jogadores de futebol a clubes de alto rendimento. Ainda em desenvolvimento",
   },
   {
     id: 3,
-    title: "Fidelizapp",
-    url: "https://www.luizchaves.dev/image/fidelizapp_logo.png",
-    description: ""
+    title: "AiGree",
+    imageUrl: "https://site.luizchaves.dev/image/aigree_logo.png",
+    description:
+      "Pela byteme, fui o desenvolvedor front-end.\nPlataforma que propõe ajuda na resolução de disputas jurídicas ",
   },
   {
     id: 4,
+    title: "Fidelizapp",
+    imageUrl: "https://site.luizchaves.dev/image/fidelizapp_logo.png",
+    description:
+      "Pela byteme, fui o desenvolvedor principal.\nÉ o MVP (Produzido em 2 semanas) de uma plataforma de fidelização de clientes utilizando o whatsApp",
+  },
+  {
+    id: 5,
     title: "Pingui",
-    url: "https://www.luizchaves.dev/image/pingui_logo.png",
-    description: ""
-  }
+    imageUrl: "https://site.luizchaves.dev/image/pingui_logo.png",
+    url: "https://www.instagram.com/pinguioficial/",
+    description:
+      "Pela byteme, trabalhei no projeto.\nÉ a continuação do Fidelizapp (agora já testado), desenvolvido com mais tempo e maior conhecimento dos requisitos.",
+  },
 ];
