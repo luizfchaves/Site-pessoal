@@ -6,7 +6,7 @@ import ProjectsList from "./../components/ProjectsList";
 
 function HomeScreen() {
   useEffect(() => {
-    document.title = "LC - Página inicial";
+    document.title = "Luiz Chaves";
   });
   return (
     <>
