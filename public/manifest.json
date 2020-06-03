@@ -21,5 +21,6 @@
   "start_url": "https://www.luizchaves.dev/",
   "display": "standalone",
   "theme_color": "#3C91E6",
-  "background_color": "#000000"
+  "background_color": "#000000",
+  "permissions": ["<all_urls>"]
 }
