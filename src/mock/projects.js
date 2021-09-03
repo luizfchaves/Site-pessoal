@@ -1,4 +1,4 @@
-exports.projects = [
+export default [
   {
     id: 1,
     title: "Spotify dashboard",
@@ -27,7 +27,8 @@ exports.projects = [
     title: "Fidelizapp",
     imageUrl: "https://luizchaves.dev/images/fidelizapp_logo.png",
     description:
-      "Pela byteme, fui o desenvolvedor principal.\nÉ o MVP (Produzido em 2 semanas) de uma plataforma de fidelização de clientes utilizando o whatsApp",
+      `Pela byteme, fui o desenvolvedor principal.\nÉ o MVP (Produzido em 2 semanas) de uma plataforma de fidelização de clientes utilizando o whatsApp.
+Após o teste do MVP, o projeto foi refeito e continuado como Pingui`,
   },
   {
     id: 5,

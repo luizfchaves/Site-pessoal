@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import { projects } from "./../../mock";
+import projects from "../../mock/projects";
 
 import "./styles.css";
-import { useStore } from "react-redux";
-// import { Container } from './styles';
 
 import dotenv from "dotenv";
 dotenv.config();

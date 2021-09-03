@@ -26,6 +26,7 @@ function setColorMode(theme) {
   document
     .querySelector("meta[name=theme-color]")
     .setAttribute("content", color[theme]["--background-color"]);
+  // eslint-disable-next-line array-callback-return
   Object.entries(color[theme]).map(r => {
     document.documentElement.style.setProperty(r[0], r[1]);
   });

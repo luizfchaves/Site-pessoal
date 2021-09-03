@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import "./styles.css";
@@ -56,7 +57,7 @@ const Navbar = () => {
     <nav id="navbar">
       <ul id="navbar-list">
         {navItems.map(item => {
-          if (!item.disabled)
+          if (!item.disabled){
             return (
               <li key={item.id} className="navbar-item">
                 <a href={item.link}>
@@ -72,6 +73,8 @@ const Navbar = () => {
                 </a>
               </li>
             );
+          }
+          return null;
         })}
 
         <li className="navbar-item" onClick={changeColorMode}>
