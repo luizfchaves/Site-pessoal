@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from 'react';
 
-import projects from "../../mock/projects";
+import projects from '../../mock/projects';
 
-import "./styles.css";
+import './styles.css';
 
-import dotenv from "dotenv";
-dotenv.config();
-const Projects = () => {
-  let [modalSelected, setModal] = useState(null);
-  useEffect(() => {
-    console.log("Projects", projects);
-  }, []);
+function Projects() {
+  const [modalSelected, setModal] = useState(null);
   return (
     <div id="projects">
       <p className="title">Projetos</p>
@@ -19,7 +14,7 @@ const Projects = () => {
           <div key={project.title}>
             <div
               className={
-                modalSelected === project.id ? "modal" : "modal-closed modal"
+                modalSelected === project.id ? 'modal' : 'modal-closed modal'
               }
             >
               <div className="modal-content">
@@ -27,12 +22,13 @@ const Projects = () => {
                 <p className="modal-description">{project.description}</p>
                 <a
                   href={project.url}
-                  className={project.url ? "btn btn-primary" : "not-show"}
+                  className={project.url ? 'btn btn-primary' : 'not-show'}
                 >
                   Acessar
                 </a>
 
                 <button
+                  type="button"
                   className="btn btn-secondary modal-close-btn"
                   onClick={() => {
                     setModal(null);
@@ -53,6 +49,7 @@ const Projects = () => {
                 {project.title}
               </p>
               <button
+                type="button"
                 className="btn btn-secondary"
                 onClick={() => {
                   setModal(project.id);
@@ -66,6 +63,6 @@ const Projects = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Projects;

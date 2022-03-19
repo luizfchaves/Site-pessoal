@@ -1,29 +1,29 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import "./styles.css";
-const curriculumDate = "19-03-2022"
+import './styles.css';
 
-const Curriculum = () => {
-  const [stateCurriculum, setStateCurriculum] = useState("closed");
+function Curriculum() {
+  const [stateCurriculum, setStateCurriculum] = useState('closed');
 
   async function handleDivCurriculum() {
     await setStateCurriculum(
-      stateCurriculum === "opened" ? "closed" : "opened"
+      stateCurriculum === 'opened' ? 'closed' : 'opened',
     );
 
-    if (stateCurriculum === "closed")
+    if (stateCurriculum === 'closed') {
       setTimeout(() => {
         window.scroll({
-          top: document.getElementsByClassName("content")[0].attributes[0]
+          top: document.getElementsByClassName('content')[0].attributes[0]
             .ownerElement.offsetHeight,
           left: 0,
-          behavior: "smooth"
+          behavior: 'smooth',
         });
       }, 250);
+    }
   }
 
   function handleDownloadCurriculum() {
-    window.open(`curriculo-${curriculumDate}.pdf`, "_blank");
+    window.open('curriculo-05-03-2020.pdf', '_blank');
   }
   return (
     <div id="curriculum">
@@ -32,14 +32,19 @@ const Curriculum = () => {
       <iframe
         id="curriculum-iframe"
         title="curriculum"
-        src={`curriculo-${curriculumDate}.pdf`}
+        src="curriculo-05-03-2020.pdf"
         className={`curriculum-${stateCurriculum}`}
       />
       <div className="row to-right distance-above">
-        <button className="btn btn-primary" onClick={handleDivCurriculum}>
-          {stateCurriculum === "opened" ? "Fechar" : "Abrir"}
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={handleDivCurriculum}
+        >
+          {stateCurriculum === 'opened' ? 'Fechar' : 'Abrir'}
         </button>
         <button
+          type="button"
           className="btn btn-secondary"
           onClick={handleDownloadCurriculum}
         >
@@ -48,6 +53,6 @@ const Curriculum = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Curriculum;

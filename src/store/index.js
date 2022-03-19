@@ -1,12 +1,11 @@
-import { createStore } from "redux";
-import { color } from "./../colors";
+import { createStore } from 'redux';
+import { color } from '../colors';
 
 function detectPrefersColor() {
-  let previousColor = localStorage.getItem("themeColor");
-  if (previousColor === "dark" || previousColor === "light")
-    return previousColor;
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
-  return "light";
+  const previousColor = localStorage.getItem('themeColor');
+  if (previousColor === 'dark' || previousColor === 'light') { return previousColor; }
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+  return 'light';
 }
 function setColorMode(theme) {
   // let funnyColors = localStorage.getItem("funnyColors");
@@ -22,25 +21,29 @@ function setColorMode(theme) {
   //   }
   //   return;
   // }
-  localStorage.setItem("themeColor", theme);
+  localStorage.setItem('themeColor', theme);
   document
-    .querySelector("meta[name=theme-color]")
-    .setAttribute("content", color[theme]["--background-color"]);
+    .querySelector('meta[name=theme-color]')
+    .setAttribute('content', color[theme]['--background-color']);
   // eslint-disable-next-line array-callback-return
-  Object.entries(color[theme]).map(r => {
+  Object.entries(color[theme]).map((r) => {
     document.documentElement.style.setProperty(r[0], r[1]);
   });
 }
 
 const INITIAL_STATE = {
-  themeColor: detectPrefersColor()
+  themeColor: detectPrefersColor(),
 };
 
+// TODO(Luiz) Consertar essa função e remover esses eslint-disables
+// eslint-disable-next-line default-param-last
 function themeColor(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case "CHANGE_THEME":
-      state.themeColor = state.themeColor === "dark" ? "light" : "dark";
-      let { themeColor } = state;
+    case 'CHANGE_THEME':
+      // eslint-disable-next-line no-param-reassign
+      state.themeColor = state.themeColor === 'dark' ? 'light' : 'dark';
+      // eslint-disable-next-line
+      const { themeColor } = state;
       setColorMode(themeColor);
       return { themeColor };
     default:
