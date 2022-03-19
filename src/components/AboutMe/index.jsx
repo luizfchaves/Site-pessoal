@@ -34,7 +34,7 @@ function AboutMe() {
             </a>
           </li>
           <li>
-            <a href="mailto:luizfaschaves@gmail.com" target="_blank">
+            <a href="mailto:luizfaschaves@hotmail.com" target="_blank">
               <Mail />
             </a>
           </li>
