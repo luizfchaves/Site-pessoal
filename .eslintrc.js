@@ -21,5 +21,7 @@ module.exports = {
     'linebreak-style': 0,
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'import/no-named-as-default': 'off',
+    'import/no-named-as-default-member': 'off',
   },
 };
