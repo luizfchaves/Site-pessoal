@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import './styles.css';
 
+const curriculumDate = '19-03-2022';
+
 function Curriculum() {
   const [stateCurriculum, setStateCurriculum] = useState('closed');
 
@@ -23,7 +25,7 @@ function Curriculum() {
   }
 
   function handleDownloadCurriculum() {
-    window.open('curriculo-05-03-2020.pdf', '_blank');
+    window.open(`curriculo-${curriculumDate}.pdf`, '_blank');
   }
   return (
     <div id="curriculum">
@@ -32,7 +34,7 @@ function Curriculum() {
       <iframe
         id="curriculum-iframe"
         title="curriculum"
-        src="curriculo-05-03-2020.pdf"
+        src={`curriculo-${curriculumDate}.pdf`}
         className={`curriculum-${stateCurriculum}`}
       />
       <div className="row to-right distance-above">
